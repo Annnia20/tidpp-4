@@ -47,7 +47,7 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                success {
                     junit 'output/coverage/junit/junit.xml'
-               // }
+               }
             }
         }
         stage('Test front end')
