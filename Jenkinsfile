@@ -88,7 +88,7 @@ pipeline {
                 if(env.ON_SUCCESS_SEND_EMAIL)
                 {
                     echo "Send email success job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL} "
-                    emailext ( body: "Success! job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL}", subject: 'Build', to: 'strion.ion@gmail.com')
+                    emailext ( body: "Success! job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL}", subject: 'Build', to: 'ecaterinaciobanu49@gmail.com')
                     echo 'Email sent'
                 }
             }
@@ -101,7 +101,7 @@ pipeline {
                 if(env.ON_FAILURE_SEND_EMAIL)
                 {
                     echo "Send email fail job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL} "
-                    emailext ( body: "Fail! job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL}", subject: 'Build', to: 'strion.ion@gmail.com')
+                    emailext ( body: "Fail! job name: ${JOB_NAME}, build number: ${BUILD_NUMBER}, build url: ${BUILD_URL}", subject: 'Build', to: 'ecaterinaciobanu49@gmail.com')
                     echo 'Email sent'
                 }
             }
