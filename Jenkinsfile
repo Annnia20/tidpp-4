@@ -42,14 +42,14 @@ pipeline {
                 echo 'Testarea backend'
                 bat "npm test"
             }  
-            post {
+           // post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                success {
+               // success {
                    // junit 'output/coverage/junit/junit.xml'
                    // archiveArtifacts 'target1/*.jar'
-                }
-            }
+               // }
+           // }
         }
         stage('Test front end')
         {
