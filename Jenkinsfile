@@ -8,7 +8,7 @@ pipeline {
     }
     
     parameters
-    {
+    { 
         booleanParam(name:'CLEAN_WORKSPACE',
         defaultValue:true,
         description:'Trebuie de sters mapa pentru buld-ul curent?'
@@ -20,7 +20,7 @@ pipeline {
     }
     
     tools {
-        // Install the Maven version configured as "MAVEN11" and add it to the path.
+
         nodejs "NodeJS"
 
 
@@ -42,12 +42,11 @@ pipeline {
                 echo 'Testarea backend'
                 bat "npm test"
             }  
-           // post {
+            post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-               // success {
-                   // junit 'output/coverage/junit/junit.xml'
-                   // archiveArtifacts 'target1/*.jar'
+               /success {
+                    junit 'output/coverage/junit/junit.xml'
                // }
            // }
         }
