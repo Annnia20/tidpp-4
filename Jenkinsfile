@@ -46,7 +46,7 @@ pipeline {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
-                    junit '**/*.xml'
+                    junit 'output/coverage/junit/junit.xml'
                    // archiveArtifacts 'target1/*.jar'
                 }
             }
