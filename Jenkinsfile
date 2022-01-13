@@ -54,7 +54,7 @@ pipeline {
         }
         stage('Test front end')
         {
-            echo 'Testing front...'
+            
             when
             {
                 expression
@@ -63,6 +63,7 @@ pipeline {
                 }
             }
             steps{
+                echo 'Testing front...'
                 echo "Testarea frontend ${params.TESTING_FRONTEND}"
             }    
         }
