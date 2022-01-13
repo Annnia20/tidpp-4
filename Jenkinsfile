@@ -40,7 +40,7 @@ pipeline {
         {
             steps{
                 echo 'Testarea backend'
-                bat "npm test"
+                sh 'npm test'
             }  
            // post {
                 // If Maven was able to run the tests, even if some of the test
