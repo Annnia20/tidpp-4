@@ -54,6 +54,7 @@ pipeline {
         }
         stage('Test front end')
         {
+            echo 'Testing front...'
             when
             {
                 expression
