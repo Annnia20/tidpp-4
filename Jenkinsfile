@@ -41,6 +41,7 @@ pipeline {
         {
             steps{
                 echo 'Testarea backend'
+                sh 'chmod 777 ./node_modules/.bin/mocha'
                 sh 'npm test'
             }  
            // post {
