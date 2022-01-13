@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Building the application'
                 // Get some code from a GitHub repository
-                git 'https://github.com/Annnia20/tidpp-3.git'
+                git 'https://github.com/Annnia20/tidpp-4.git'
                 sh 'npm install'
                 sh 'npm install mocha'
 
