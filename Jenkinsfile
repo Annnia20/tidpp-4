@@ -63,7 +63,19 @@ pipeline {
                 echo "Testarea frontend ${params.TESTING_FRONTEND}"
             }    
         }
+       stage("Continuous Delivery") {
+            steps {
+                echo "Push all to DockerHub"
+                bat 'docker push ecaterinaciobanu49/lab4tidpp'
+            }
+        }
         
+        stage("Continuous Deployment") {
+            steps {
+                echo "Docker Build & docker-compose"
+                bat 'docker build . -t ecaterinaciobanu49/lab4tidpp && docker-compose up'
+            }
+        } 
     }
     post
     {
